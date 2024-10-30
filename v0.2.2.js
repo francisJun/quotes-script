@@ -5,15 +5,16 @@
     sessionStorage.setItem("unific-quote", JSON.stringify(quote));
 
     const iframe = document.createElement("iframe");
-    iframe.src = `https://unific.com/quote?product=${encodeURIComponent(
+    iframe.src = `http://localhost:3000?product=${encodeURIComponent(
       JSON.stringify(product)
     )}`;
     iframe.style.position = "fixed";
-    iframe.style.top = "0";
-    iframe.style.left = "0";
-    iframe.style.width = "100%";
-    iframe.style.height = "100%";
+    iframe.style.top = "50%";
+    iframe.style.left = "50%";
+    iframe.style.width = "50%";
+    iframe.style.height = "50%";
     iframe.style.zIndex = "9999";
+    iframe.style.transform = "translate(-50%, -50%)";
 
     const closeIframe = () => {
       document.body.removeChild(iframe);
