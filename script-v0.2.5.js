@@ -5,6 +5,7 @@
     sessionStorage.setItem("unific-quote", JSON.stringify(quote));
 
     const iframe = document.createElement("iframe");
+    // THIS CAN BE A URL TO UNIFIC
     iframe.src = `http://localhost:3000/quote?product=${encodeURIComponent(
       JSON.stringify(product)
     )}`;
@@ -20,9 +21,9 @@
     const closeButton = document.createElement("button");
     closeButton.innerText = "Close";
     closeButton.style.position = "fixed";
-    closeButton.style.top = "calc(50% - 25px)"; // Adjust to position the button at the top of the iframe
-    closeButton.style.left = "calc(50% + 25%)"; // Adjust to position the button at the right edge of the iframe
-    closeButton.style.zIndex = "10000"; // Ensure the button is above the iframe
+    closeButton.style.top = "calc(50% - 25px)";
+    closeButton.style.left = "calc(50% + 25%)";
+    closeButton.style.zIndex = "10000";
     closeButton.style.transform = "translate(-50%, -50%)";
     closeButton.style.padding = "10px 20px";
     closeButton.style.backgroundColor = "#f00";
