@@ -5,7 +5,7 @@
     sessionStorage.setItem("unific-quote", JSON.stringify(quote));
 
     const iframe = document.createElement("iframe");
-    iframe.src = `http://localhost:3000?product=${encodeURIComponent(
+    iframe.src = `http://localhost:3000/quote?product=${encodeURIComponent(
       JSON.stringify(product)
     )}`;
     iframe.style.position = "fixed";
